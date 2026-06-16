@@ -1,7 +1,4 @@
-# Mon premier projet TAL - L3 Lettres
+# Mon premier projet TAL:
 
-Ce script en Python est mon tout premier projet.
+Ces scripts en Python sont mes tout premiers projets.
 
-### Fonctionnalités :
-* Analyse la longueur des mots saisis par l'utilisateur.
-* Filtre dynamiquement les mots selon un seuil minimal choisi.
