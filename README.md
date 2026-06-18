@@ -2,7 +2,7 @@
 
 Ces scripts en Python sont mes tout premiers projets.
 
-### 1. Analyseur de Mots Longs (`projet 5 (mot court ou long).py`)
+### 1. Analyseur de Mots Longs ('mot court ou long.py')
 - Compte instantanément le nombre total de mots d'une phrase.
 - Extrait et affiche uniquement les mots de 4 lettres ou plus.
 
