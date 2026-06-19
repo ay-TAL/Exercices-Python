@@ -1,6 +1,6 @@
 exceptions = {"souris": "singulier", "bus": "singulier", "choix": "singulier", "prix": "singulier"}
 
-termine = ('s','x')
+termine = ('s','x') 
 
 def mots(word):
  if word in exceptions:
