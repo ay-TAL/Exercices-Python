@@ -14,4 +14,5 @@ Ces scripts en Python sont mes tout premiers projets.
 ### 4. Analyseur Lexical (`analyseur_lexical.py`)
 - Découpe et catégorise les éléments d'une phrase (mots, symboles) pour une analyse plus poussée.
 
-### 5.
+### 5. Analyseur verbe  (`anlyseur_verbes.py`)
+- isole le radical et la terminaison d'un verbe du premier groupe au présent pour en identifier la structure.
