@@ -1,21 +1,22 @@
-def filtrer_mot(mot, limit):
-    if len(mot) < limit:
-        return 'le mot est trop court'
-    else:
-        return 'mot valide'
+def filtrer_mot(mot: str, limite: int) -> str:
+    """Vérifie si la longueur du mot atteint la limite fixée."""
+    if len(mot) < limite:
+        return 'Le mot est trop court'
+    return 'Mot valide'
 
-def analyse_saisie():
-    ver = input('veuiller saisire un mot: ')
-    return ver
+def obtenir_saisie() -> str:
+    return input('Veuillez saisir un mot : ').strip()
 
-def combien():
-    cmb = input('veuiller attribuer le nombre: ')
-    return cmb
+def obtenir_limite() -> int:
+    while True:
+        try:
+            return int(input('Veuillez attribuer un nombre limite : '))
+        except ValueError:
+            print("Erreur : Veuillez entrer un chiffre valide.")
 
-mot_utilisateur = analyse_saisie()
-limite_texte = combien()
-limite_chiffre = int(limite_texte)
-
-res = filtrer_mot(mot_utilisateur, limite_chiffre)
-
-print(res)
+if __name__ == "__main__":
+    mot_utilisateur = obtenir_saisie()
+    limite_chiffre = obtenir_limite()
+    
+    resultat = filtrer_mot(mot_utilisateur, limite_chiffre)
+    print(resultat)
