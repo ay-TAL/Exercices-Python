@@ -16,3 +16,6 @@ Ces scripts en Python sont mes tout premiers projets.
 
 ### 5. Analyseur verbe  (`anlyseur_verbes.py`)
 - isole le radical et la terminaison d'un verbe du premier, deuxième et troisième groupe au présent pour en identifier la structure.
+
+### 6. Nettoyeur de Texte (`nettoyeur_texte.py`)
+- Découpe un texte en mots, élimine les mots vides (*stopwords*) en français, et standardise le résultat en minuscules.
