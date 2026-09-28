@@ -12,7 +12,8 @@ def analyseur_de_phrase(phrase):
             
     return mots_longs
 
-phrase_utilisateur = input('Insérez la phrase : ')
+phrase_utilisateur = input('Insérez votre phrase : ')
+
 resultat = analyseur_de_phrase(phrase_utilisateur)
 
-print("Les mots de 4 lettres ou plus sont :", resultat)
+print("Les mots de quatre lettres ou plus sont :", resultat)
