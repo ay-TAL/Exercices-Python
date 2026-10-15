@@ -1,26 +1,43 @@
-exceptions = {
-    "souris": "singulier",
-    "bus": "singulier",
-    "choix": "singulier",
-    "prix": "singulier",
-    "nez": "singulier",
-    "gaz": "singulier",
+EXCEPTIONS = {
+    "souris",
+    "bus",
+    "choix",
+    "prix",
+    "nez",
+    "gaz",
 }
 
-termine = ("s", "x", "z")
+TERMINAISONS_PLURIEL = ("s", "x", "z")
 
 
-def analyser_nombre_mot(word):
-    word = word.lower().strip()
+def analyser_nombre_mot(mot: str) -> str:
+    """Détermine si un mot donné est au singulier ou au pluriel.
 
-    if word in exceptions:
-        return "ce mot est au singulier"
+    Args:
+        mot (str): Le mot à analyser.
 
-    if word.endswith(termine):
-        return "ce mot est au pluriel"
+    Returns:
+        str: Une phrase indiquant le nombre du mot ("singulier" ou "pluriel").
+    """
 
-    return "ce mot est au singulier"
+    mot_nettoye = mot.lower().strip()
+
+    if not mot_nettoye:
+        return "Erreur : Le texte saisi est vide."
 
 
-resultat = analyser_nombre_mot(input("Quel est le mot : "))
-print(resultat)
+    if mot_nettoye in EXCEPTIONS:
+        return f"Le mot '{mot}' est au singulier."
+
+
+    if mot_nettoye.endswith(TERMINAISONS_PLURIEL):
+        return f"Le mot '{mot}' est au pluriel."
+
+    return f"Le mot '{mot}' est au singulier."
+
+
+
+if __name__ == "__main__":
+    saisie_utilisateur = input("Quel est le mot : ")
+    resultat = analyser_nombre_mot(saisie_utilisateur)
+    print(resultat)
