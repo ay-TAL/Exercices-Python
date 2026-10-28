@@ -1,22 +1,19 @@
-def analyser_phrase(phrase: str) -> list[str]:
-    """Nettoie la phrase sans RegEx et filtre les mots de 4 lettres ou plus."""
+def analyseur_de_phrase(phrase, limite):
+    phrase_nettoiee = phrase.lower().strip()
+    liste_mots = phrase_nettoiee.split()
 
-    ponctuation = ".,;:!?()[]{}«»'\"-_"
-    
-    phrase_nettoyee = "".join(c if c not in ponctuation else " " for c in phrase)
-    
+    print("Nombre total de mots est :", len(liste_mots))
 
-    mots = phrase_nettoyee.lower().split()
-    
+    mots_valides = []
+    for mot in liste_mots:
+        if len(mot) >= limite:
+            mots_valides.append(mot)
 
-    return [mot for mot in mots if len(mot) >= 4]
+    return mots_valides
 
 
-if __name__ == "__main__":
-    phrase_utilisateur = input("Insérez la phrase : ")
-    
-    mots_filtrés = analyser_phrase(phrase_utilisateur)
-    
-    print(f"\nNombre de mots de 4 lettres ou plus : {len(mots_filtrés)}")
-    
-    print("Les mots retenus sont :", mots_filtrés)
+phrase_utilisateur = input("Insérer la phrase : ")
+taille_minimale = int(input("Choisir la taille minimale des mots : "))
+
+resultat = analyseur_de_phrase(phrase_utilisateur, taille_minimale)
+print(f"Les mots de {taille_minimale} lettres ou plus sont :", resultat)
